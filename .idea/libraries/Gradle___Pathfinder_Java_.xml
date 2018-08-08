@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: :Pathfinder-Java:">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/Pathfinder-Java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
