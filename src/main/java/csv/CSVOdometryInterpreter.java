@@ -1,10 +1,9 @@
 package csv;
 
-import com.team254.lib.util.ReflectingCSVWriter;
 import javafx.stage.Stage;
-import kinematics.DifferentialDriveKinematics;
-import kinematics.Pose;
-import kinematics.PoseTracker;
+import physics.DifferentialDrive;
+import math.geometry.Pose;
+import main.PoseTracker;
 
 import java.util.List;
 
@@ -12,11 +11,11 @@ public class CSVOdometryInterpreter {
 
     private CSVReader csvReader;
     private ReflectingCSVWriter<SimplePose> csvWriter;
-    private DifferentialDriveKinematics kinematics;
+    private DifferentialDrive kinematics;
     private PoseTracker stateEstimator;
     private Stage stage;
 
-    public CSVOdometryInterpreter(String logPath, String outputPath, DifferentialDriveKinematics kinematics, Stage stage) {
+    public CSVOdometryInterpreter(String logPath, String outputPath, DifferentialDrive kinematics, Stage stage) {
         this.csvReader = new CSVReader(logPath);
         this.csvWriter = new ReflectingCSVWriter<>(outputPath, SimplePose.class);
         this.kinematics = kinematics;

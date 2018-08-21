@@ -1,6 +1,6 @@
 package adapter;
 
-import com.team254.lib.util.math.RigidTransform2d;
+import math.geometry.RigidTransform2d;
 
 public class TrajectorySegment {
 

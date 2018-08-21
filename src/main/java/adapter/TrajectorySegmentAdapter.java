@@ -1,8 +1,8 @@
 package adapter;
 
-import com.team254.lib.util.math.RigidTransform2d;
-import com.team254.lib.util.math.Rotation2d;
-import com.team254.lib.util.math.Translation2d;
+import math.geometry.RigidTransform2d;
+import math.geometry.Rotation2d;
+import math.geometry.Translation2d;
 import jaci.pathfinder.Trajectory;
 
 public class TrajectorySegmentAdapter extends TrajectorySegment {

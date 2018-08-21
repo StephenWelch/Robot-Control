@@ -2,14 +2,14 @@ package control;
 
 import adapter.PathAdapter;
 import adapter.PathSegment;
-import com.team254.lib.util.math.RigidTransform2d;
-import com.team254.lib.util.math.Rotation2d;
-import com.team254.lib.util.math.Translation2d;
-import com.team254.lib.util.math.Twist2d;
+import math.geometry.RigidTransform2d;
+import math.geometry.Rotation2d;
+import math.geometry.Translation2d;
+import math.geometry.Twist2d;
 import jaci.pathfinder.Trajectory;
-import kinematics.DifferentialDriveKinematics;
-import kinematics.Movement;
-import kinematics.Pose;
+import physics.DifferentialDrive;
+import physics.Movement;
+import math.geometry.Pose;
 
 import java.util.List;
 
@@ -18,13 +18,13 @@ import java.util.List;
  */
 public class PolarController implements IController {
 
-    private DifferentialDriveKinematics kinematics;
+    private DifferentialDrive kinematics;
 
     private List<PathSegment> path;
     private int currentWaypointIndex = 0;
     private final double k1, k2, k3;
 
-    public PolarController(double k1, double k2, double k3, DifferentialDriveKinematics kinematics) {
+    public PolarController(double k1, double k2, double k3, DifferentialDrive kinematics) {
         this.k1 = k1;
         this.k2 = k2;
         this.k3 = k3;

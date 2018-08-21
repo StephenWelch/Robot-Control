@@ -1,11 +1,12 @@
 package control;
 
-import kinematics.Movement;
-import kinematics.Pose;
+import physics.Movement;
+import math.geometry.Pose;
 
 public interface IController {
 
     Movement update(Pose pose, double dt);
     boolean isFinished();
+    void reset();
 
 }

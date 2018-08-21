@@ -2,14 +2,14 @@ package control;
 
 import adapter.TrajectoryAdapter;
 import adapter.TrajectorySegment;
-import com.team254.lib.util.math.RigidTransform2d;
-import com.team254.lib.util.math.Rotation2d;
-import com.team254.lib.util.math.Translation2d;
-import com.team254.lib.util.math.Twist2d;
+import math.geometry.RigidTransform2d;
+import math.geometry.Rotation2d;
+import math.geometry.Translation2d;
+import math.geometry.Twist2d;
 import jaci.pathfinder.Trajectory;
-import kinematics.DifferentialDriveKinematics;
-import kinematics.Movement;
-import kinematics.Pose;
+import physics.DifferentialDrive;
+import physics.Movement;
+import math.geometry.Pose;
 
 import java.util.List;
 
@@ -19,14 +19,14 @@ import java.util.List;
 public class FeedforwardController implements IController {
 
     private List<TrajectorySegment> trajectory;
-    private DifferentialDriveKinematics kinematics;
+    private DifferentialDrive kinematics;
 
     private final double zeta, b;
 
     private Pose currentPose;
     private int currentSegmentIndex = 0;
 
-    public FeedforwardController(double zeta, double b, DifferentialDriveKinematics kinematics) {
+    public FeedforwardController(double zeta, double b, DifferentialDrive kinematics) {
         this.zeta = zeta;
         this.b = b;
         this.kinematics = kinematics;

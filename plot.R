@@ -32,8 +32,9 @@ animate <- function(tracking_x, tracking_y, tracking_heading, trajectory_x, traj
 
 }
 
-tracking <- read.csv("E:/code/robotics-projects/personal/kinematics/tracking.csv")
-trajectory <- read.csv("E:/code/robotics-projects/personal/kinematics/trajectory.csv")
+tracking <- read.csv("E:/code/robotics-projects/personal/physics/tracking.csv")
+trajectory <- read.csv("E:/code/robotics-projects/personal/physics/trajectory.csv")
 
 matplot( c(0), c(0), type = "line", xlim = c(0, 54 * 12), ylim = c(0, 27 * 12), xlab = "X (inches)", ylab = "Y (inches)")
+
 animate(tracking[, 1], tracking[, 2], tracking[, 3], trajectory[, 2], trajectory[, 3], 0.01)
