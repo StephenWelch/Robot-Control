@@ -5,4 +5,5 @@ This project was my way of getting to grips with Team 254's geometry and physic 
 
 # What can it do?
 Robot-Control is capable of intaking our team's (1885) drivebase logs as CSV and calculating the path it traveled throughout a match.
-It's also capable of simulating the path-following behavior using a time-varying non-linear trajectory-following controller (a.k.a Ramsete) or a polar-coordinate based pose-stabilization controller.
+It's also capable of simulating the path-following behavior using a time-varying non-linear trajectory-following controller (a.k.a Ramsete) or a polar-coordinate based pose-stabilization controller. Trajectories are generated using Pathfinder.
+Output is written to CSV and displayed using GNUPlot.
